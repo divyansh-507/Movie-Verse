@@ -1,0 +1,18 @@
+{
+  "signupUsers": [
+    {
+      "username": "divyanshb",
+      "email": "divyanshb507@gmail.com",
+      "password": "Divyansh@123",
+      "mobile": "9927412233",
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "mobile": "1234",
+      "id": 2
+    }
+  ]
+}

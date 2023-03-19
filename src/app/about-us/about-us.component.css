@@ -1,0 +1,64 @@
+.bgphoto{
+    width: 100%;
+    /* min-height: 85vh; */
+    /* background-image: url(images/aboutus-bg.jpg); */
+    height:100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.containers {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+#content-section1{
+    font-family: 'Merriweather', serif;
+    margin-top: 50px;
+    float:left;
+    width:55%;
+}
+
+#image-section1{
+    margin-top: 50px;
+    float:right;
+    width:40%;
+    border-radius: 4px;
+    opacity: 0.8; 
+    cursor: pointer;
+    filter: drop-shadow(5px 10px 5px rgb(27, 41, 27));
+}
+
+#content-section2{
+    font-family: 'Merriweather', serif;
+    /* margin-top: 50px; */
+    float:right;
+    width:50%;
+}
+
+#image-section2{
+    float:left;
+    width:40%;
+    border-radius: 4px;
+    opacity: 0.9; 
+    cursor: pointer;
+    filter: drop-shadow(5px 10px 5px rgb(95, 99, 95));
+}
+
+.coverImg{
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/aboutus-bg.jpg");
+    margin-bottom: 60px;
+    
+}
+#image-section1:hover{
+    opacity:2;
+}
+#image-section2:hover {
+    opacity: 1;
+}
+#aboutus{
+    background-color: rgb(210, 215, 219);
+}

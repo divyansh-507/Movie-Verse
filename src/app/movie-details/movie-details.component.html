@@ -1,0 +1,65 @@
+<div class="poster">
+    <img src="{{movie.backdrop_path}}" class="movie-poster" alt="movie-image">
+</div>
+
+<section id="about" class="bgphoto text-white" style="background-color: rgb(0,0,0,0.6)">
+    <div class="containers">
+        <div class="content-section">
+            <div class="title">
+                <h1 class="heading">{{movie.name}}</h1> <br> <br>
+            </div>
+            <div class="content">
+                <table class="table-borderless table-hover text-white" style="background-color: rgb(0,0,0,0.4)">
+                    <tr>
+                        <td> <strong>Movie Id</strong> </td>
+                        <td> {{movie.id}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Original Language</strong></td>
+                        <td>{{movie.original_language}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Original Title</strong></td>
+                        <td>{{movie.original_title}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Genre Ids</strong></td>
+                        <td>{{movie.genre_ids}}</td>
+                    </tr>
+                    <tr>
+                        <td> <strong>Genre</strong> </td>
+                        <td> <span class="p-1" style="background-color:rgb(0, 119, 199)">
+                            <b *ngFor="let id of movie.genre_ids, let i=index">
+                               <span *ngIf="i < 3">{{ genres.get(id) }} </span>
+                           </b>
+                           </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overview</strong></td>
+                        <td>{{movie.overview}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Popularity</strong></td>
+                        <td>{{movie.popularity}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vote Average</strong></td>
+                        <td>{{movie.vote_average}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vote Count</strong></td>
+                        <td>{{movie.vote_count}}</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+        <div class="image-section">
+            <img class="zoom imagee" src="{{movie.poster_path}}" alt="movie-image" height="550px" width="400px">
+        </div>
+        <div class="trailer">
+            <button class="btn btn-dark btn-lg" style="margin-left:100px"> play </button>
+        </div>
+    </div>
+</section>

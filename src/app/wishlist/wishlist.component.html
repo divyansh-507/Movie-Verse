@@ -1,0 +1,34 @@
+<h1> Movie WishList </h1>
+  <button class="btn btn-success" (click)="displayMovies()">Load Wishlist ...</button> &nbsp;
+  <br> <br> <br>
+
+  <table class="table table-hover table-border">
+    <thead>
+      <th> Movie Id </th>
+      <th> Name </th>
+      <th> Genre </th>
+      <th> Ratings </th>
+      <th> Action </th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let movie of movieArr">
+        <td>{{movie.movieId}}</td>
+        <td>{{movie.movieName}}</td>
+        <td>{{movie.movieGenre}}</td>
+        <td>{{movie.ratings}}</td>
+        <td>
+          <button class="btn btn-success" (click)="onEdit(movie.movieId)">Edit</button> &nbsp;
+          <button class="btn btn-danger" (click)="onDelete(movie.movieId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf = 'inputForm == true'>
+        Name : <input type="text" [(ngModel)]="movieArr[index].movieName"/> <br/> <br/>
+        Genre : <input type="text" [(ngModel)]="movieArr[index].movieGenre"/> <br/><br/>
+        Ratings : <input type="text" [(ngModel)]="movieArr[index].ratings"/> <br/> <br/><br/>
+  
+        <button class="btn btn-primary" (click)="onSave()">Save</button>
+    
+    </div>

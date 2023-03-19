@@ -1,0 +1,10 @@
+*{
+    overflow: hidden;
+}
+
+.explore{
+    background-image: url("../../assets/explorebg.jpg");
+    background-color: rgba(0,0,0,0.8);
+    background-attachment: fixed; 
+    background-position: center;
+}

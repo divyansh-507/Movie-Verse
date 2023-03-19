@@ -1,0 +1,22 @@
+<div class="containers">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center mb-3">
+                    <h1>Login</h1>
+                    <h6>Please enter user user-name & password !!</h6>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="mb-3">
+                      <label for="exampleInputUserName" class="form-label">User Name or Email</label>
+                      <input formControlName="username" type="text" class="form-control" id="exampleInputUserName" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword" class="form-label">Password</label>
+                      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword">
+                    </div>
+                    <button type="submit" class="m-2">Login</button>
+                  </form>
+                  <a style="color:white" routerLink="/signup">New user? Click here to SignUp!!</a>
+            </div>
+          </div>
+</div>
