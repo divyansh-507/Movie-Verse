@@ -18,9 +18,11 @@ export class ExploreComponent implements OnInit{
   originalsMovies !: Movie;
   genres !: Map<number, string>;
 
+  // injecting dataservice dependency into component.ts 
   constructor(private dataService : DataService){}
 
   ngOnInit(): void{
+    // on initialization these methods gets called
     this.initializeGenres();
     this.getLatestMovie();
     this.getNowPlayingMovies();
@@ -33,6 +35,7 @@ export class ExploreComponent implements OnInit{
 
   // genreUrl: string = 'https://api.themoviedb.org/3/genre/tv/list?api_key=d6413c050a2b93056fe115eba3239453';
 
+  // mapping genreid with genre names
   initializeGenres(){
      this.genres = new Map([
       [12, 'Adventure'],
@@ -56,10 +59,12 @@ export class ExploreComponent implements OnInit{
     ]);
   }
 
+  // initializing movieToDisplay varible to display the details(properties) of movies
   displayDetails(movie: ResultsEntity){
     AppComponent.movieToDisplay = movie;
   }
 
+  // get lastest movie from dataservice
   getLatestMovie(){
     this.dataService.getLatestMovie().subscribe(
       res => {
@@ -72,6 +77,7 @@ export class ExploreComponent implements OnInit{
     )
   }
 
+  // checking backdrop path for latest movie (i.e the image souce path), if it doesnt exist initialize it with poster path
   checkData(res: any) : any{
     if(!res.backdrop_path){
       res.backdrop_path = 'https://image.tmdb/org/t/p/original'+res.poster_path+'?api_key='+DataService.api_key;
@@ -79,7 +85,7 @@ export class ExploreComponent implements OnInit{
       res.backdrop_path = 'https://image.tmdb/org/t/p/original'+res.backdrop_path+'?api_key='+DataService.api_key;
     }
   }
-
+// get now playing movie from dataservice
   getNowPlayingMovies(){
     this.dataService.getNowPlayingMovies().subscribe(
       res => {
@@ -89,7 +95,7 @@ export class ExploreComponent implements OnInit{
       }
     )
   }
-
+// get trending movie from dataservice
   getTrendingMovies(){
     this.dataService.getTrendingMovies().subscribe(
       res => {
@@ -99,7 +105,7 @@ export class ExploreComponent implements OnInit{
       }
     )
   }
-
+// get popular movie from dataservice
   getPopularMovies(){
     this.dataService.getPopularMovies().subscribe(
       res => {
@@ -110,7 +116,7 @@ export class ExploreComponent implements OnInit{
       }
     )
   }
-
+// get top-rated movie from dataservice
   getTopRatedMovies(){
     this.dataService.getTopRatedMovies().subscribe(
       res => {
@@ -120,7 +126,7 @@ export class ExploreComponent implements OnInit{
       }
     )
   }
-
+// get upcoming movie from dataservice
   getUpcomingMovies(){
     this.dataService.getUpcomingMovies().subscribe(
       res => {
@@ -130,7 +136,7 @@ export class ExploreComponent implements OnInit{
       }
     )
   }
-
+// get originals from dataservice
   getOriginals(){
     this.dataService.getOriginals().subscribe(
       res => {
@@ -141,6 +147,7 @@ export class ExploreComponent implements OnInit{
     )
   }
 
+  // check the backdrop_path for movie (i.e the image souce path), if it doesnt exist initialize it with poster path
   modifyData(movies: Movie) : Movie{
     if(movies.results){
       movies.results.forEach(element =>{

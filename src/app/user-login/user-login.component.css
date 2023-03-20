@@ -20,7 +20,7 @@ body{
 .containers{
     height:828px;
     width:100%;
-    /* background-image: url("../../assets/login.jpg"); */
+    background-image: url("../../assets/login.jpg");
     background-size: cover;
     
 	display: flex;
