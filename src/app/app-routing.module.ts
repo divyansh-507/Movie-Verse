@@ -8,17 +8,21 @@ import { LoginComponent } from './login/login.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MoviesHomeComponent } from './movies-home/movies-home.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "login", pathMatch: "full"},
-  {path:"login", component: LoginComponent},
-  {path: "signup", component: SignupComponent},
+  {path: "", component: MoviesHomeComponent},
+  {path: "user-login", component: UserLoginComponent},
+  // {path:"login", component: LoginComponent},
+  // {path: "signup", component: SignupComponent},
   {path: "movies-home", component : MoviesHomeComponent},
   {path: "explore", component: ExploreComponent},
   {path: "ContactUs", component: ContactUsComponent},
   {path: "AboutUs", component: AboutUsComponent},
   {path: "footer", component: FooterComponent},
-  {path: "movie-details", component: MovieDetailsComponent}
+  {path: "movie-details", component: MovieDetailsComponent},
+  {path: "wish-list", component: WishlistComponent}
 ];
 
 @NgModule({

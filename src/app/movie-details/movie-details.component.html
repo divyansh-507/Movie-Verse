@@ -1,15 +1,22 @@
+<app-tool-bar></app-tool-bar>
+
+<div id="movie-details">
 <div class="poster">
     <img src="{{movie.backdrop_path}}" class="movie-poster" alt="movie-image">
 </div>
 
-<section id="about" class="bgphoto text-white" style="background-color: rgb(0,0,0,0.6)">
+<section id="about" class="bgphoto text-white">
     <div class="containers">
         <div class="content-section">
             <div class="title">
-                <h1 class="heading">{{movie.name}}</h1> <br> <br>
+                <h1 class="heading text-center" style="font-weight:2rem">{{movie.name}}</h1> <br> <br>
             </div>
             <div class="content">
-                <table class="table-borderless table-hover text-white" style="background-color: rgb(0,0,0,0.4)">
+                <table class="table-borderless table-hover text-white" style="background-color: rgb(0,0,0,0.6)">
+                    <tr>
+                        <td><strong>Overview</strong></td>
+                        <td>{{movie.overview}}</td>
+                    </tr>
                     <tr>
                         <td> <strong>Movie Id</strong> </td>
                         <td> {{movie.id}}</td>
@@ -36,10 +43,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Overview</strong></td>
-                        <td>{{movie.overview}}</td>
-                    </tr>
-                    <tr>
                         <td><strong>Popularity</strong></td>
                         <td>{{movie.popularity}}</td>
                     </tr>
@@ -63,3 +66,6 @@
         </div>
     </div>
 </section>
+</div>
+
+<app-footer></app-footer>

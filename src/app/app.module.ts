@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactUsAltComponent } from './contact-us-alt/contact-us-alt.component';
 import { UsersComponent } from './users/users.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     SignupComponent,
     ContactUsAltComponent,
     UsersComponent,
-    WishlistComponent
+    WishlistComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

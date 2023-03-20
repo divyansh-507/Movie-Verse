@@ -10,13 +10,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  /* background-image: url("./assets/background.jpg"); */
+  background-image: url("./assets/robot.jpg");
   background-attachment: fixed; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  background-color: black;
 }
 
 
