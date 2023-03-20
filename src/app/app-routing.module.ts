@@ -12,7 +12,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
-  {path: "", component: MoviesHomeComponent},
+  {path: "", component: UserLoginComponent},
   {path: "user-login", component: UserLoginComponent},
   // {path:"login", component: LoginComponent},
   // {path: "signup", component: SignupComponent},
